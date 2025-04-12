@@ -1,0 +1,11 @@
+This Python script demonstrates how to fetch content from a server using the `socket` library and perform a simple HTTP GET request to retrieve the file `intro-short.txt` from `data.pr4e.org`.
+
+### Steps in the Code:
+1. **Socket Creation:** The socket object is created using `AF_INET` for IPv4 and `SOCK_STREAM` for TCP.
+2. **Connecting to the Server:** The socket connects to the server at `data.pr4e.org` on port 80, which is the standard port for HTTP.
+3. **Sending HTTP GET Request:** The script sends a GET request for the file `intro-short.txt` to the server.
+4. **Receiving the Response:** The server responds with both the headers and the content. The script captures the first 1024 bytes of the response and decodes it.
+5. **Printing the Response:** It prints both the entire response (headers + content) and the headers separately.
+6. **Simulated Content:** Finally, the content of the file is simulated and printed for demonstration purposes.
+
+This code is a low-level way of making an HTTP request, which avoids using higher-level libraries like `requests`. It demonstrates how raw HTTP communication works using sockets.
